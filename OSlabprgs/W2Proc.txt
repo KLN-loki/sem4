@@ -1,0 +1,241 @@
+
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cd [K[ cat version
+Linux version 3.11.0-12-generic (buildd@komainu) (gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu7) ) #19-Ubuntu SMP Wed Oct 9 16:12:00 UTC 2013
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 165
+model name	: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz
+stepping	: 2
+microcode	: 0xffffffff
+cpu MHz		: 2496.007
+cache size	: 8192 KB
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss nx pdpe1gb rdtscp lm constant_tsc arch_perfmon xtopology tsc_reliable nonstop_tsc pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm 3dnowprefetch arat fsgsbase smep
+bogomips	: 4992.01
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat meminfo
+MemTotal:        1025844 kB
+MemFree:          147364 kB
+Buffers:           64052 kB
+Cached:           382172 kB
+SwapCached:         1884 kB
+Active:           368900 kB
+Inactive:         408056 kB
+Active(anon):     186336 kB
+Inactive(anon):   223196 kB
+Active(file):     182564 kB
+Inactive(file):   184860 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+HighTotal:        135048 kB
+HighFree:           1796 kB
+LowTotal:         890796 kB
+LowFree:          145568 kB
+SwapTotal:       1046524 kB
+SwapFree:        1037544 kB
+Dirty:                16 kB
+Writeback:             0 kB
+AnonPages:        329504 kB
+Mapped:           118104 kB
+Shmem:             78792 kB
+Slab:              59488 kB
+SReclaimable:      44136 kB
+SUnreclaim:        15352 kB
+KernelStack:        3064 kB
+PageTables:         7324 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1559444 kB
+Committed_AS:    2854964 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       23904 kB
+VmallocChunk:      75416 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       24568 kB
+DirectMap2M:      888832 kB
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat loadavg
+0.01 0.06 0.16 3/377 20543
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat uptime
+23964.91 21843.42
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat mounts
+rootfs / rootfs rw 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,relatime,size=504212k,nr_inodes=126053,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,noexec,relatime,size=102588k,mode=755 0 0
+/dev/disk/by-uuid/872edd0c-d9c7-4f6e-8dba-14597dbc1381 / ext4 rw,relatime,errors=remount-ro,data=ordered 0 0
+none /sys/fs/cgroup tmpfs rw,relatime,size=4k,mode=755 0 0
+none /sys/fs/fuse/connections fusectl rw,relatime 0 0
+none /sys/kernel/debug debugfs rw,relatime 0 0
+none /sys/kernel/security securityfs rw,relatime 0 0
+none /run/lock tmpfs rw,nosuid,nodev,noexec,relatime,size=5120k 0 0
+none /run/shm tmpfs rw,nosuid,nodev,relatime 0 0
+none /run/user tmpfs rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755 0 0
+none /sys/fs/pstore pstore rw,relatime 0 0
+systemd /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,name=systemd 0 0
+vmware-vmblock /run/vmblock-fuse fuse.vmware-vmblock rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other 0 0
+gvfsd-fuse /run/user/1001/gvfs fuse.gvfsd-fuse rw,nosuid,nodev,relatime,user_id=1001,group_id=1001 0 0
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat partitions
+major minor  #blocks  name
+
+  11        0    1048575 sr0
+  11        1    1048575 sr1
+   8        0   20971520 sda
+   8        1   19921920 sda1
+   8        2          1 sda2
+   8        5    1046528 sda5
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat swaps
+Filename				Type		Size	Used	Priority
+/dev/sda5                               partition	1046524	8980	-1
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat devices
+Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  5 ttyprintk
+  6 lp
+  7 vcs
+ 10 misc
+ 13 input
+ 21 sg
+ 29 fb
+ 99 ppdev
+108 ppp
+116 alsa
+128 ptm
+136 pts
+180 usb
+189 usb_device
+216 rfcomm
+226 drm
+251 hidraw
+252 bsg
+253 watchdog
+254 rtc
+
+Block devices:
+  1 ramdisk
+  2 fd
+259 blkext
+  7 loop
+  8 sd
+  9 md
+ 11 sr
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd
+252 device-mapper
+253 virtblk
+254 mdp
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat interrupts
+           CPU0       
+  0:         83   IO-APIC-edge      timer
+  1:      12158   IO-APIC-edge      i8042
+  6:          3   IO-APIC-edge      floppy
+  7:          0   IO-APIC-edge      parport0
+  8:          1   IO-APIC-edge      rtc0
+  9:          0   IO-APIC-fasteoi   acpi
+ 12:     566096   IO-APIC-edge      i8042
+ 14:          0   IO-APIC-edge      ata_piix
+ 15:          0   IO-APIC-edge      ata_piix
+ 16:       4354   IO-APIC-fasteoi   vmwgfx, snd_ens1371
+ 17:      70991   IO-APIC-fasteoi   ehci_hcd:usb1, ioc0
+ 18:         72   IO-APIC-fasteoi   uhci_hcd:usb2
+ 19:      17906   IO-APIC-fasteoi   eth0
+ 40:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 41:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 42:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 43:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 44:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 45:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 46:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 47:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 48:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 49:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 50:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 51:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 52:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 53:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 54:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 55:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 56:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 57:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 58:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 59:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 60:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 61:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 62:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 63:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 64:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 65:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 66:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 67:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 68:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 69:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 70:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 71:          0   PCI-MSI-edge      PCIe PME, pciehp
+ 72:      23550   PCI-MSI-edge      ahci
+ 73:          4   PCI-MSI-edge      vmw_vmci
+ 74:          0   PCI-MSI-edge      vmw_vmci
+NMI:          0   Non-maskable interrupts
+LOC:    1577223   Local timer interrupts
+SPU:          0   Spurious interrupts
+PMI:          0   Performance monitoring interrupts
+IWI:     175538   IRQ work interrupts
+RTR:          0   APIC ICR read retries
+RES:          0   Rescheduling interrupts
+CAL:          0   Function call interrupts
+TLB:          0   TLB shootdowns
+TRM:          0   Thermal event interrupts
+THR:          0   Threshold APIC interrupts
+MCE:          0   Machine check exceptions
+MCP:         81   Machine check polls
+ERR:          0
+MIS:          0
+]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat stat
+cpu  96750 1040 109429 2169754 905 5 1131 0 0 0
+cpu0 96750 1040 109429 2169754 905 5 1131 0 0 0
+intr 2450745 83 12196 0 0 0 0 3 0 1 0 0 0 566096 0 0 0 4354 71002 72 17925 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23586 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 8412829
+btime 1686173450
+processes 20563
+procs_running 5
+procs_blocked 0
+softirq 1691305 0 757426 13062 26112 90638 0 9917 0 4418 789732
+
