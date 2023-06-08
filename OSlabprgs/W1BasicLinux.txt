@@ -1,0 +1,153 @@
+
+kln1423@KLN:~/file$ ls
+dir1 dir2 dir3 file1 file2 file3 parent
+
+kln1423@KLN:~/file$ ls -l
+total 28
+drwxr-xr-x 2 kln1423 kln1423 4096 Feb 20 20:20 dir1
+drwxr-xr-x 2 kln1423 kln1423 4096 Feb 20 20:20 dir2
+drwxr-xr-x 2 kln1423 kln1423 4096 Feb 20 20:20 dir3
+drwxr-xr-x 2 kln1423 kln1423 4096 Feb 14 18:23 file1
+drwxr-xr-x 2 kln1423 kln1423 4096 Feb 14 18:23 file2
+drwxr-xr-x 2 kln1423 kln1423 4096 Feb 14 18:24 file3
+drwxr-xr-x 3 kln1423 kln1423 4096 Feb 20 20:21 parent
+
+kln1423@KLN:~/file$ ls -a
+. .. dir1 dir2 dir3 file1 file2 file3 parent
+
+kln1423@KLN:~/file$ ls -h
+dir1 dir2 dir3 file1 file2 file3 parent
+
+kln1423@KLN:~/file$ ls -r
+parent file3 file2 file1 dir3 dir2 dir1
+
+kln1423@KLN:~/file$ ls -t
+parent dir1 dir2 dir3 file3 file2 file1
+
+kln1423@KLN:~$ cd ~/file
+
+kln1423@KLN:~/file$ pwd
+/home/kln1423/file
+
+kln1423@KLN:~/file$ mkdir new
+
+kln1423@KLN:~/file$ cd new
+
+kln1423@KLN:~/file/new$ mkdir -p subnew/subsubnew
+
+kln1423@KLN:~/file/new$ cd ..
+
+kln1423@KLN:~/file$ rmdir parent
+rmdir: failed to remove 'parent': Directory not empty
+
+kln1423@KLN:~/file$ rmdir dir1
+
+kln1423@KLN:~/file$ rmdir dir2
+
+kln1423@KLN:~/file$ rmdir dir3
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new parent
+
+kln1423@KLN:~/file$ ls file1
+
+kln1423@KLN:~/file$ ls file2
+
+kln1423@KLN:~/file$ ls file3
+
+kln1423@KLN:~/file$ ls new
+subnew
+
+kln1423@KLN:~/file$ ls parent
+child
+
+kln1423@KLN:~/file$ touch new1
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new new1 parent
+
+kln1423@KLN:~/file$ touch touch.txt
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new new1 parent touch.txt
+
+kln1423@KLN:~/file$ touch touch1.txt
+
+kln1423@KLN:~/file$ cp touch1.txt touch.txt
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new new1 parent touch.txt touch1.txt
+
+kln1423@KLN:~/file$ mv touch1.txt new
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new new1 parent touch.txt
+
+kln1423@KLN:~/file$ mv touch.txt text.txt
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new new1 parent text.txt
+
+kln1423@KLN:~/file$ rm new1
+
+kln1423@KLN:~/file$ ls
+file1 file2 file3 new parent text.txt
+
+kln1423@KLN:~/file$ rm -r file1
+
+kln1423@KLN:~/file$ rm -r new
+
+kln1423@KLN:~/file$ ls
+file2 file3 parent text.txt
+
+kln1423@KLN:~/file$ echo "kalluri"
+kalluri
+
+kln1423@KLN:~/file$ cat text.txt
+
+kln1423@KLN:~/file$ find ~/file "text.txt"
+/home/kln1423/file
+/home/kln1423/file/file2
+/home/kln1423/file/text.txt
+/home/kln1423/file/file
+/home/kln1423/file/parent
+/home/kln1423/file/parent/child
+/home/kln1423/file/parent/child/grandchild
+/home/kln1423/file/file3
+text.txt
+
+kln1423@KLN:~/file$ chmod 744 text.txt
+
+kln1423@KLN:~/file$ chmod u+rwx,g+r,o+r text.txt
+
+kln1423@KLN:~/file$ ls -l text.txt
+-rwxr--r-- 1 kln1423 kln1423 0 Feb 20 20:33 text.txt
+
+kln1423@KLN:~/file$ chown kln1423 text.txt
+
+kln1423@KLN:~/file$ ps
+ PID TTY TIME CMD
+ 10 pts/0 00:00:00 bash
+ 131 pts/0 00:00:00 ps
+
+kln1423@KLN:~/file$ ps aux
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+root 1 0.0 0.0 2276 1532 ? Sl 20:17 0:00 /init
+root 4 0.0 0.0 2308 68 ? Sl 20:17 0:00 plan9 --control-socket 5 --l
+root 8 0.0 0.0 2280 100 ? Ss 20:17 0:00 /init
+root 9 0.0 0.0 2296 104 ? D 20:17 0:00 /init
+kln1423 10 0.0 0.1 6476 5400 pts/0 Ss 20:17 0:00 -bash
+kln1423 132 0.0 0.0 7476 3092 pts/0 R+ 20:58 0:00 ps aux
+
+kln1423@KLN:~/file$ top
+top - 20:59:16 up 42 min, 0 users, load average: 0.00, 0.00, 0.00
+Tasks: 6 total, 1 running, 5 sleeping, 0 stopped, 0 zombie
+%Cpu(s): 0.1 us, 0.0 sy, 0.0 ni, 99.9 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st
+MiB Mem : 3838.0 total, 3354.8 free, 310.1 used, 173.1 buff/cache
+MiB Swap: 1024.0 total, 1024.0 free, 0.0 used. 3327.3 avail Mem
+ PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND
+ 133 kln1423 20 0 7784 3456 2856 R 0.0 0.1 0:00.18 top
+
+kln1423@KLN:~/file$ ls /
+bin dev home lib lib64 lost+found mnt proc run snap sys usr
+boot etc init lib32 libx32 media opt root sbin srv tmp var
