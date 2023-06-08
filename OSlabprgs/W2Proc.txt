@@ -1,6 +1,7 @@
 
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cd [K[ cat version
 Linux version 3.11.0-12-generic (buildd@komainu) (gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu7) ) #19-Ubuntu SMP Wed Oct 9 16:12:00 UTC 2013
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat cpuinfo
 processor	: 0
 vendor_id	: GenuineIntel
@@ -72,10 +73,13 @@ HugePages_Surp:        0
 Hugepagesize:       2048 kB
 DirectMap4k:       24568 kB
 DirectMap2M:      888832 kB
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat loadavg
 0.01 0.06 0.16 3/377 20543
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat uptime
 23964.91 21843.42
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat mounts
 rootfs / rootfs rw 0 0
 sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
@@ -95,6 +99,7 @@ none /sys/fs/pstore pstore rw,relatime 0 0
 systemd /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,name=systemd 0 0
 vmware-vmblock /run/vmblock-fuse fuse.vmware-vmblock rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other 0 0
 gvfsd-fuse /run/user/1001/gvfs fuse.gvfsd-fuse rw,nosuid,nodev,relatime,user_id=1001,group_id=1001 0 0
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat partitions
 major minor  #blocks  name
 
@@ -104,9 +109,11 @@ major minor  #blocks  name
    8        1   19921920 sda1
    8        2          1 sda2
    8        5    1046528 sda5
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat swaps
 Filename				Type		Size	Used	Priority
 /dev/sda5                               partition	1046524	8980	-1
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat devices
 Character devices:
   1 mem
@@ -163,6 +170,7 @@ Block devices:
 252 device-mapper
 253 virtblk
 254 mdp
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat interrupts
            CPU0       
   0:         83   IO-APIC-edge      timer
@@ -228,6 +236,7 @@ MCE:          0   Machine check exceptions
 MCP:         81   Machine check polls
 ERR:          0
 MIS:          0
+
 ]0;kln@ubuntu: /prockln@ubuntu:/proc$ cat stat
 cpu  96750 1040 109429 2169754 905 5 1131 0 0 0
 cpu0 96750 1040 109429 2169754 905 5 1131 0 0 0
