@@ -7,7 +7,7 @@ int cost[MAX_SIZE][MAX_SIZE];
 int parent[MAX_SIZE];
 
 int find(int i) {
-    while (parent[i])
+    while (parent[i] != 0)
         i = parent[i];
     return i;
 }
@@ -26,8 +26,8 @@ void kruskalsAlgorithm(int n) {
 
     printf("The edges of Minimum Cost Spanning Tree are\n");
     while (ne < n) {
-        for (i = 1, min = INT_MAX; i <= n; i++) {
-            for (j = 1; j <= n; j++) {
+        for (i = 0, min = INT_MAX; i <= n; i++) {
+            for (j = 0; j <= n; j++) {
                 if (cost[i][j] < min) {
                     min = cost[i][j];
                     a = u = i;
@@ -51,6 +51,10 @@ int main() {
     printf("\nImplementation of Kruskal's algorithm\n");
     printf("Enter the number of vertices: ");
     scanf("%d", &n);
+    // Initialize parent array
+    for (int i = 0; i < MAX_SIZE; i++) {
+        parent[i] = 0;
+    }
     printf("Enter the cost adjacency matrix (-1 for infinity):\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
