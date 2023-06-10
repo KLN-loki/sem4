@@ -23,11 +23,11 @@ int Union(int i, int j) {
 void kruskalsAlgorithm(int n) {
     int i, j, k, a, b, u, v, ne = 1;
     int min, mincost = 0;
-
     printf("The edges of Minimum Cost Spanning Tree are\n");
     while (ne < n) {
-        for (i = 0, min = INT_MAX; i <= n; i++) {
-            for (j = 0; j <= n; j++) {
+        min = INT_MAX;
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
                 if (cost[i][j] < min) {
                     min = cost[i][j];
                     a = u = i;
