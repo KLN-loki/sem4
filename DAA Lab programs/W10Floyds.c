@@ -32,7 +32,6 @@ void floydWarshall(int graph[][n]) {
     int dist[n][n];
     int path[n][n];
     int i, j, k;
-
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
             if (graph[i][j] == -1) {
@@ -47,7 +46,6 @@ void floydWarshall(int graph[][n]) {
             }
         }
     }
-
     for (k = 0; k < n; k++) {
         for (i = 0; i < n; i++) {
             for (j = 0; j < n; j++) {
@@ -59,7 +57,6 @@ void floydWarshall(int graph[][n]) {
             }
         }
     }
-
     printAllPaths(dist, path);
 }
 
@@ -67,7 +64,6 @@ int main() {
     printf("Enter the number of nodes: ");
     scanf("%d", &n);
     int graph[n][n];
-
     printf("Enter the cost adjacency matrix (-1 for infinity):\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -75,8 +71,6 @@ int main() {
             if(graph[i][j] == -1) graph[i][j] = INT_MAX;
         }
     }
-
     floydWarshall(graph);
-
     return 0;
 }
