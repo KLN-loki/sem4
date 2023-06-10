@@ -1,21 +1,30 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <limits.h>
 
-#define INFINITY 9999
 #define MAX_NODES 100
+
+void printPath(int previous[], int node) {
+    if (previous[node] == -1) {
+        printf("%d", node);
+        return;
+    }
+    printPath(previous, previous[node]);
+    printf(" -> %d", node);
+}
 
 void dijkstra(int graph[MAX_NODES][MAX_NODES], int startNode, int numNodes) {
     int distances[MAX_NODES];
     bool visited[MAX_NODES];
     int previous[MAX_NODES];
     for (int i = 0; i < numNodes; i++) {
-        distances[i] = INFINITY;
+        distances[i] = INT_MAX;
         visited[i] = false;
         previous[i] = -1;
     }
     distances[startNode] = 0;
     for (int count = 0; count < numNodes - 1; count++) {
-        int minDistance = INFINITY;
+        int minDistance = INT_MAX;
         int minIndex = -1;
         for (int i = 0; i < numNodes; i++) {
             if (!visited[i] && distances[i] < minDistance) {
@@ -29,7 +38,8 @@ void dijkstra(int graph[MAX_NODES][MAX_NODES], int startNode, int numNodes) {
         }
         visited[minIndex] = true;
         for (int i = 0; i < numNodes; i++) {
-            if (!visited[i] && graph[minIndex][i] && distances[minIndex] != INFINITY &&
+            if (!visited[i] && graph[minIndex][i] != INT_MAX &&
+                distances[minIndex] != INT_MAX &&
                 distances[minIndex] + graph[minIndex][i] < distances[i]) {
                 distances[i] = distances[minIndex] + graph[minIndex][i];
                 previous[i] = minIndex;
@@ -40,15 +50,10 @@ void dijkstra(int graph[MAX_NODES][MAX_NODES], int startNode, int numNodes) {
     for (int i = 0; i < numNodes; i++) {
         if (i != startNode) {
             printf("Node %d -> Node %d: ", startNode, i);
-            if (distances[i] == INFINITY) {
+            if (distances[i] == INT_MAX) {
                 printf("No path\n");
             } else {
-                printf("%d", startNode);
-                int current = i;
-                while (previous[current] != -1) {
-                    printf(" -> %d", current);
-                    current = previous[current];
-                }
+                printPath(previous, i);
                 printf("\n");
             }
         }
@@ -64,7 +69,8 @@ int main() {
     for (int i = 0; i < numNodes; i++) {
         for (int j = 0; j < numNodes; j++) {
             scanf("%d", &graph[i][j]);
-            if(graph[i][j] == -1) graph[i][j] = INFINITY;
+            if (graph[i][j] == -1)
+                graph[i][j] = INT_MAX;
         }
     }
     printf("Enter the starting node: ");
@@ -72,4 +78,3 @@ int main() {
     dijkstra(graph, startNode, numNodes);
     return 0;
 }
-
