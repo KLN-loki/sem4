@@ -60,10 +60,11 @@ int main() {
     printf("Enter the number of nodes in the graph: ");
     scanf("%d", &numNodes);
     int graph[MAX_NODES][MAX_NODES];
-    printf("Enter the adjacency matrix:\n");
+    printf("Enter the cost adjacency matrix (-1 for infinity):\n");
     for (int i = 0; i < numNodes; i++) {
         for (int j = 0; j < numNodes; j++) {
             scanf("%d", &graph[i][j]);
+            if(graph[i][j] == -1) graph[i][j] = INFINITY;
         }
     }
     printf("Enter the starting node: ");
