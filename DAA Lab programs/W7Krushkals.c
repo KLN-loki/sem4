@@ -7,7 +7,7 @@ int cost[MAX_SIZE][MAX_SIZE];
 int parent[MAX_SIZE];
 
 int find(int i) {
-    while (parent[i] != 0)
+    while (parent[i] != -1)
         i = parent[i];
     return i;
 }
@@ -53,7 +53,7 @@ int main() {
     scanf("%d", &n);
     // Initialize parent array
     for (int i = 0; i < MAX_SIZE; i++) {
-        parent[i] = 0;
+        parent[i] = -1;
     }
     printf("Enter the cost adjacency matrix (-1 for infinity):\n");
     for (int i = 0; i < n; i++) {
