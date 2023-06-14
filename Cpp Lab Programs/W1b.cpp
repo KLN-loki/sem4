@@ -4,16 +4,16 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+void swap(int &a, int &b){
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
-void swap(float *a, float *b){
-    float temp = *a;
-    *a = *b;
-    *b = temp;
+void swap(float &a, float &b){
+    float temp = a;
+    a = b;
+    b = temp;
 }
 
 int main(){
@@ -23,14 +23,14 @@ int main(){
     cin >> a >> b;
     cout << "Before swaping : " << endl;
     cout << "a = " << a << ", b = " << b << endl;
-    swap(&a, &b);
+    swap(a, b);
     cout << "After swaping : " << endl;
     cout << "a = " << a << ", b = " << b << endl;
     cout << "Enter floating point numbers c and d : ";
     cin >> c >> d;
     cout << "Before swaping : " << endl;
     cout << "c = " << c << ", d = " << d << endl;
-    swap(&c, &d);
+    swap(c, d);
     cout << "After swaping : " << endl;
     cout << "c = " << c << ", d = " << d << endl;
 }
