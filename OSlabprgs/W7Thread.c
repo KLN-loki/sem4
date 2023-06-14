@@ -29,5 +29,6 @@ int main(){
     for(i = 20; i < 25; i++){
         printf("%d\n", i);
     }
+    pthread_join(tid, NULL);
     return 0;
 }
