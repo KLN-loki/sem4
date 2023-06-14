@@ -15,7 +15,7 @@ void *DiningPhilo(void *args){
     sem_wait(&s[(i+1)%n]);
     printf("%d eating...\n", i);
     sleep(1);
-    printf("%d working...\n", i);
+    printf("%d stooped eating...\n", i);
     sem_post(&s[(i+1)%n]);
     sem_post(&s[i]);
     return NULL;
