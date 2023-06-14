@@ -6,13 +6,13 @@
 
 int cp;
 
-int DIffMIn(int diff[], int req[], int index[50], int n){
+int DIffMIn(int req[], int index[50], int n){
     int min = INT_MAX;
     int flag, i;
     for (i = 0; i < n; i++){
-        diff[i] = abs(cp - req[i]);
-        if (diff[i] < min && index[i] == 0) {
-            min = diff[i];
+        int absolute = abs(cp - req[i]);
+        if (absolute < min && index[i] == 0) {
+            min = absolute;
             flag = i;
         }
     }
@@ -33,11 +33,10 @@ int main(){
     // int cp;
     printf("Enter the initial sector position : ");
     scanf("%d", &cp);
-    int diff[n];
     int index[50] = {0};
     int Tseek = 0;
     for (i = 0; i < n; i++){
-        Tseek += DIffMIn(diff, req, index, n);
+        Tseek += DIffMIn(req, index, n);
     }
     printf("%d", Tseek);
     return 0;
