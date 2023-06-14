@@ -29,7 +29,7 @@ int main(){
     }
     for(i = 0; i < n; i++){
         val[i] = i;
-        pthread_create(&t[i], NULL, DiningPhilo, (void*)&val[i]);
+        pthread_create(&t[i], NULL, DiningPhilo, &val[i]);
     }
     for(i = 0; i < n; i++){
         pthread_join(t[i], NULL);
